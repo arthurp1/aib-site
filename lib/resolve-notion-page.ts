@@ -84,6 +84,7 @@ export async function resolveNotionPage(domain: string, rawPageId?: string) {
 
     console.log(site)
     recordMap = await getPage(pageId)
+    console.log(recordMap)
   }
 
   const props = { site, recordMap, pageId }

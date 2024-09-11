@@ -12,6 +12,7 @@
   --notion-header-height: 54px;
 }
 
+
 .notion-frame {
   padding: 0;
 }
@@ -167,7 +168,7 @@
 }
 
 .notion-title {
-  display: block;
+  display: none;
   text-align: center;
 }
 

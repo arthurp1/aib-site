@@ -1,6 +1,9 @@
 import * as React from 'react'
+import { useRouter } from 'next/router'
 
 import { NotionPage } from '@/components/NotionPage'
+import { NotionHome } from '@/components/NotionHome'
+
 import { domain } from '@/lib/config'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
 
@@ -19,5 +22,11 @@ export const getStaticProps = async () => {
 }
 
 export default function NotionDomainPage(props) {
-  return <NotionPage {...props} />
+  const router = useRouter()
+
+  if (router.pathname === '/') {
+    return <NotionHome {...props} />
+  } else {
+    return <NotionPage {...props} />
+  }
 }
